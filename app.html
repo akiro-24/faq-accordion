@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>FAQ Accordion</title>
+  </head>
+  <body>
+    <img alt="" class="bg-image" />
+    <main>
+      <div class="container">
+        <div class="accordion-title">
+          <img
+            src="faq-accordion-main/assets/images/icon-star.svg"
+            alt=""
+            class="star"
+          />
+          <p class="title">FAQs</p>
+        </div>
+        <div class="accordion">
+          <ul>
+            <li>
+              <label for="q1" class="question">
+                <img
+                  src="faq-accordion-main/assets/images/icon-plus.svg"
+                  alt=""
+                  class="label-icon"
+                />
+                What is Frontend Mentor, and how will it help me?
+              </label>
+              <input type="radio" class="input" id="q1" name="faq" />
+              <div class="faq-answer">
+                Frontend Mentor offers realistic coding challenges to help
+                developers improve their frontend coding skills with projects in
+                HTML, CSS, and JavaScript. It's suitable for all levels and
+                ideal for portfolio building.
+              </div>
+            </li>
+            <li>
+              <label for="q2" class="question">
+                <img
+                  src="faq-accordion-main/assets/images/icon-plus.svg"
+                  alt=""
+                  class="label-icon"
+                />
+                Is Frontend Mentor free?
+              </label>
+              <input type="radio" class="input" id="q2" name="faq" />
+              <div class="faq-answer">
+                Yes, Frontend Mentor offers both free and premium coding
+                challenges, with the free option providing access to a range of
+                projects suitable for all skill levels.
+              </div>
+            </li>
+            <li>
+              <label for="q3" class="question">
+                <img
+                  src="faq-accordion-main/assets/images/icon-plus.svg"
+                  alt=""
+                  class="label-icon"
+                />
+                Can I use Frontend Mentor projects in my portfolio?
+              </label>
+              <input type="radio" class="input" id="q3" name="faq" />
+              <div class="faq-answer">
+                Yes, you can use projects completed on Frontend Mentor in your
+                portfolio. It's an excellent way to showcase your skills to
+                potential employers!
+              </div>
+            </li>
+            <li>
+              <label for="q4" class="question">
+                <img
+                  src="faq-accordion-main/assets/images/icon-plus.svg"
+                  alt=""
+                  class="label-icon"
+                />
+                How can I get help if I'm stuck on a Frontend Mentor challenge?
+              </label>
+              <input type="radio" class="input" id="q4" name="faq" />
+              <div class="faq-answer">
+                The best place to get help is inside Frontend Mentor's Discord
+                community. There's a help channel where you can ask questions
+                and seek support from other community members.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    let inputs = document.querySelectorAll(".input");
+    let icons = document.querySelectorAll(".label-icon");
+
+    inputs.forEach((element, index) => {
+      element.addEventListener("change", () => {
+        icons.forEach((element) => {
+          element.src = "faq-accordion-main/assets/images/icon-plus.svg";
+        });
+
+        icons[index].src = "faq-accordion-main/assets/images/icon-minus.svg";
+      });
+    });
+  </script>
+</html>
